@@ -43,3 +43,14 @@ Index: pkg-config-0.28/glib/configure.ac
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
+--- pkg-config-0.28.orig/glib/glib/gdate.c	2017-10-15 13:13:09.647028242 +0100
++++ pkg-config-0.28/glib/glib/gdate.c	2017-10-15 13:12:57.895440063 +0100
+@@ -2494,7 +2494,7 @@
+        * recognize whether strftime actually failed or just returned "".
+        */
+       tmpbuf[0] = '\1';
+-      tmplen = strftime (tmpbuf, tmpbufsize, locale_format, &tm);
++      tmplen = strftime ("%s", tmpbuf, tmpbufsize, locale_format, &tm);
+ 
+       if (tmplen == 0 && tmpbuf[0] != '\0')
+         {
