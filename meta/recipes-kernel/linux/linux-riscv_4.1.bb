@@ -18,7 +18,7 @@ FILES_kernel-modules = ""
 ALLOW_EMPTY_kernel-modules = "1"
 DESCRIPTION_kernel-modules = "Kernel modules meta package"
 
-#COMPATIBLE_MACHINE = "your_machine"
+COMPATIBLE_MACHINE = "qemuriscv64"
 
 PR = "r1"
 
