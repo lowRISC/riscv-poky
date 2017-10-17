@@ -26,7 +26,7 @@ do_install() {
     for i in $tmp
     do
 	j=`echo ${i} | sed s/\;/\ /g`
-	label=`echo ${i} | sed -e 's/tty//' -e 's/^.*;//' -e 's/;.*//'`
+	label=`echo ${i} | sed -e 's/tty//' -e 's/^.*;//' -e 's/;.*//' -e 's/console/co/'`
 	echo "$label:12345:respawn:${sysconfdir}/init.d/start_getty ${j}" >> ${D}${sysconfdir}/inittab
     done
 
